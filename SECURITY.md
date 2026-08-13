@@ -9,7 +9,12 @@
   trusted publishing); every version links back to the exact commit and
   workflow run that produced it. Provenance is not a silver bullet — read the
   source; it's short.
-- npm org (@jsonlint) requires 2FA; no publish from developer machines.
+- One documented exception: **v0.1.0 was bootstrap-published manually with
+  2FA**, because npm requires a package to exist before a trusted publisher
+  can be configured. Immediately after, the trusted publisher was linked and
+  token-based publishing disallowed; every version after 0.1.0 is CI-only.
+- npm org (@jsonlint) requires 2FA; no tokens, no publishes from developer
+  machines beyond the bootstrap above.
 
 ## Parser hardening
 
