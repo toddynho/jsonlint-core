@@ -1,5 +1,7 @@
 # @jsonlint/core
 
+[![CI](https://github.com/toddynho/jsonlint-core/actions/workflows/ci.yml/badge.svg)](https://github.com/toddynho/jsonlint-core/actions/workflows/ci.yml)
+
 The JSON engine behind [jsonlint.com](https://jsonlint.com) — the validator developers have pasted broken JSON into since 2009.
 
 **Every error in one pass. Errors that tell you how to fix them. 25–40x faster than the parser it replaces. Zero dependencies, no install scripts, published with provenance.**

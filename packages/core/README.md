@@ -1,5 +1,7 @@
 # @jsonlint/core
 
+[![CI](https://github.com/toddynho/jsonlint-core/actions/workflows/ci.yml/badge.svg)](https://github.com/toddynho/jsonlint-core/actions/workflows/ci.yml)
+
 The JSON engine behind [jsonlint.com](https://jsonlint.com). Every error in one pass — with locations, hints, and recovery — at 25-40x the speed of the legacy `jsonlint` package. Zero dependencies. No install scripts.
 
 ```js

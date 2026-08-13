@@ -1,6 +1,6 @@
 {
   "name": "@jsonlint/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Diagnostics-grade JSON engine: every error in one pass, with locations, hints, and recovery. Zero dependencies, no install scripts.",
   "license": "MIT",
   "type": "module",
