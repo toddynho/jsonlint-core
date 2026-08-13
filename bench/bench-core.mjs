@@ -1,7 +1,7 @@
 // @jsonlint/core (pure-JS) vs incumbents, same methodology as bench.js
 import fs from "node:fs";
 import { createRequire } from "node:module";
-import { validate, tryParse } from "/home/claude/jsonlint-core/src/index.js";
+import { validate, tryParse } from "../packages/core/src/index.js";
 const require = createRequire(import.meta.url);
 const jsonlint = require("jsonlint");
 const JSON5 = require("json5");

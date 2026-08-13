@@ -1,6 +1,6 @@
 // Hardening gauntlet for @jsonlint/core
 import { readdirSync, readFileSync } from "node:fs";
-import { validate, tryParse, parse } from "/home/claude/jsonlint-core/src/index.js";
+import { validate, tryParse, parse } from "../src/index.js";
 
 let pass = 0, fail = 0;
 const failures = [];
