@@ -1,0 +1,29 @@
+name: Publish
+# Publishes @jsonlint/core to npm with provenance when a v* tag is pushed.
+# Setup (one-time): npmjs.com -> @jsonlint org -> package settings ->
+# "Trusted publisher" -> link this GitHub repo + this workflow filename.
+# No NPM_TOKEN secret needed after that (OIDC).
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+  id-token: write   # OIDC for npm provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, registry-url: "https://registry.npmjs.org" }
+      - name: Fetch conformance corpora
+        run: CORPORA_DIR=/tmp bash scripts/fetch-corpora.sh
+      - name: Full test gate
+        run: |
+          CORPORA_DIR=/tmp node packages/core/test/run.js
+          CORPORA_DIR=/tmp node packages/core/test/harden.js
+      - name: Publish with provenance
+        working-directory: packages/core
+        run: npm publish --provenance --access public

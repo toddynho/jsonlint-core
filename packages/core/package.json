@@ -1,0 +1,44 @@
+{
+  "name": "@jsonlint/core",
+  "version": "0.1.0",
+  "description": "Diagnostics-grade JSON engine: every error in one pass, with locations, hints, and recovery. Zero dependencies, no install scripts.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "keywords": [
+    "json",
+    "jsonc",
+    "lint",
+    "validator",
+    "parser",
+    "diagnostics",
+    "jsonlint"
+  ],
+  "homepage": "https://jsonlint.com",
+  "dependencies": {},
+  "author": "Todd Garland (https://jsonlint.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddynho/jsonlint-core.git",
+    "directory": "packages/core"
+  },
+  "bugs": "https://github.com/toddynho/jsonlint-core/issues"
+}

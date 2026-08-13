@@ -1,0 +1,1109 @@
+[
+ {
+  "repo": "zaach",
+  "num": 148,
+  "state": "open",
+  "title": "Sai.net",
+  "body": "sai.net@a.sai.com",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 147,
+  "state": "open",
+  "title": "Sai.net",
+  "body": "sai.net@a.sai.com ",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 146,
+  "state": "open",
+  "title": "jsonlint.com down?",
+  "body": "title says it all.  4/28/26 @18:30",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 145,
+  "state": "open",
+  "title": "Can't adjust text window size anymore",
+  "body": "In the past, you could always adjust the size of the linter window. Now it's a fixed size and no longer adjustable from bottom-right corner, making it difficult to see a bigger picture of a larger JSON object. The window size is fine on a 1990s-era 640x480 CRT, but in the age of 1440p, 4k, and ultrawide monitors this fixed size doesn't make much sense.",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 144,
+  "state": "open",
+  "title": "DEPRECATED add notice on github and npmjs.org",
+  "body": "",
+  "reactions": 3,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 143,
+  "state": "open",
+  "title": "Sort keys but not top-level keys",
+  "body": "A package.json looks like this:\r\n\r\n```json\r\n{\r\n  \"name\": \"...\",\r\n  \"dependencies\": {\r\n     \"a\": \"...\",\r\n     \"b\": \"...\"\r\n  }\r\n}\r\n```\r\n\r\nI want to keep the order of name and dependencies, but want to make sure that the list of dependencies are sorted. I think a good approach for this would be to let the `--sort-keys` flag accept a number, which is the minimum depth at which it begins sorting.\r\n\r\n```\r\n npx jsonlint -s 1 -i -q package.json\r\n```",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 142,
+  "state": "open",
+  "title": "Incorrect error message and error location for invalid escape sequences",
+  "body": "Incorrect error message and error location for invalid escape sequences:\r\n```json\r\n{\r\n\t\"\": \"foobar\\?\"\r\n}\r\n```\r\nCurrent message:\r\n```\r\nError: Parse error on line 2:\r\n{\t\"\": \"foobar\\?\"}\r\n------^\r\nExpecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[', got 'undefined'\r\n```\r\nExpected error message:\r\n```\r\nInvalid escape sequence \\?\r\n```\r\nError location should point directly at `\\?`. Current location is especially confusing for very long strings.",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 140,
+  "state": "closed",
+  "title": "Dear Zaach, how can we help?",
+  "body": "Dear @zaach,\r\n\r\n`jsonlint` has been awesome ever since [the first commit][1] more than ten years ago.\r\n\r\nBut maintaining an open-source project can be hard, even under the best conditions.\r\nTime is limited, things changes, priorities shift, life happens.\r\n\r\nWhat can we, the community at large, do to make sure `jsonlint` stays awesome for another ten years?\r\n\r\nThis is your project. You built it, you maintained it for years, and all credit is yours.\r\nBut it is floundering. It is not getting the love it needs. The love it _deserves_.\r\n\r\nLet us lighten your load. Allow us to aid you in the thousan",
+  "reactions": 12,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 139,
+  "state": "open",
+  "title": "jsonlint does not properly process double backslash",
+  "body": "Merry Christmas and happy new year!\r\n\r\nI noticed this bug when I tried to format a string that looks like a Windows file path. Here's a minimal example:\r\n\r\n```\r\necho '{\"a\": \"\\\\\\\\b\\\\\\\\\"}' | jsonlint\r\n{\r\n  \"a\": \"\\b\\\\\"\r\n}\r\n```\r\n\r\nThe value of `a` string should have been `\\\\b\\\\`.",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 138,
+  "state": "open",
+  "title": "{   \"participants\": [     {       \"name\": \"Jeky\"     },     {       \"name\": \"Malcolm Hines\"     }   ],   \"mess",
+  "body": "{\r\n  \"participants\": [\r\n    {\r\n      \"name\": \"Jeky\"\r\n    },\r\n    {\r\n      \"name\": \"Malcolm Hines\"\r\n    }\r\n  ],\r\n  \"messages\": [\r\n    {\r\n      \"sender_name\": \"Malcolm Hines\",\r\n      \"timestamp_ms\": 1627374900904,\r\n      \"content\": \"You are now connected on Messenger\",\r\n      \"type\": \"Generic\",\r\n      \"is_unsent\": false\r\n    }\r\n  ],\r\n  \"title\": \"Jeky\",\r\n  \"is_still_participant\": true,\r\n  \"thread_type\": \"Regular\",\r\n  \"thread_path\": \"archived_threads/jeky_itiifdbrjg\",\r\n  \"magic_words\": [\r\n    \r\n  ]\r\n}",
+  "reactions": 2,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 137,
+  "state": "open",
+  "title": "Is this project dead?",
+  "body": "It seems that there is discussion since 2017 (#103) about the deprecation of nomnom, it was removed from NPM and it has vulnerabilities.\r\n\r\nIf no one reply, I think that I will fork this project and publish it to NPM. Unless someone knows an alternative or has already published a fork to npm with fixed vulnerabilities.\r\n\r\n**EDIT:**\r\nI've sent him DM on Twitter, he didn't reply.",
+  "reactions": 0,
+  "comments": 5
+ },
+ {
+  "repo": "zaach",
+  "num": 135,
+  "state": "closed",
+  "title": "Master is not working as nomnom module is not found",
+  "body": "Reproduction steps:\r\n\r\n```bash\r\n# cd into an empty directory\r\nnpm install zaach/jsonlint#master\r\n\r\n# Run jsonlint with\r\nnode_modules/.bin/jsonlint\r\n\r\n# The following error is shown\r\n\r\ninternal/modules/cjs/loader.js:638\r\n    throw err;\r\n    ^\r\n\r\nError: Cannot find module 'nomnom'\r\n    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)\r\n    at Function.Module._load (internal/modules/cjs/loader.js:562:25)\r\n    at Module.require (internal/modules/cjs/loader.js:692:17)\r\n    at require (internal/modules/cjs/helpers.js:25:18)\r\n    at Object.<anonymous> (/private/var/folders/2",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 133,
+  "state": "open",
+  "title": "Arbitrary code execution vulnerability affecting underscore package",
+  "body": "Any hope of getting a fix that replaces nomnom? It's deprecated and depends on a version of underscore that has a high severity vulnerability:\r\n\r\nhttps://snyk.io/vuln/SNYK-JS-UNDERSCORE-1080984\r\n\r\n```\r\n\u2514\u2500\u252c jsonlint@1.6.3\r\n  \u2514\u2500\u252c nomnom@1.8.1\r\n    \u2514\u2500\u2500 underscore@1.6.0\r\n```",
+  "reactions": 17,
+  "comments": 6
+ },
+ {
+  "repo": "zaach",
+  "num": 131,
+  "state": "open",
+  "title": "Ahbahpatch",
+  "body": "https://github.com/zaach/jsonlint/blob/843cad2bbd87139bb75806c1c24fe0d821a41ff4/package.json\r\n@",
+  "reactions": 1,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 130,
+  "state": "open",
+  "title": "RangeError: Maximum call stack size exceeded",
+  "body": "I have a broken JSON, the JSON lints fails with \r\n```\r\nRangeError: Maximum call stack size exceeded\r\n    at String.match (<anonymous>)\r\n    at Object.next (jsonlint.js:316)\r\n    at Object.lex (jsonlint.js:349)\r\n    at Object.lex (jsonlint.js:353)\r\n    at lex (jsonlint.js:91)\r\n```\r\nInstead of some nice error message. I have used `lib/jsonlint.js` file.",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 129,
+  "state": "open",
+  "title": "Use git tag for the latest releases",
+  "body": "The last git tag is `v1.6.0`, please, make tags for `v1.6.3` and `v1.6.2`, `v1.6.1`, too.",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 125,
+  "state": "open",
+  "title": "Module not found: Error",
+  "body": "When I bundle my project using webpack `Module not found: Error` is occured.\r\nIt seems webpack releated issue.\r\n\r\nAnyone have the same problem as me?\r\n\r\n<img src=\"https://user-images.githubusercontent.com/14273601/94097565-b29ae580-fe61-11ea-812d-bef47ffd2055.png\" width=\"350\" height=\"250\" />\r\n\r\n> jsonlint v1.6.3\r\n\r\n",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "zaach",
+  "num": 123,
+  "state": "open",
+  "title": "Problem with webpack compile jsonlint library",
+  "body": "Hi,\r\n\r\nLast time i decided install this great library to my project. And then i had problem with building in webpack, this is my file structure:\r\n![Zrzut ekranu (312)](https://user-images.githubusercontent.com/36790120/79323847-08f91500-7f0f-11ea-91e1-18c6b73a7c82.png)\r\n\r\nAnd there's is a error which i get:\r\n![Zrzut ekranu (310)](https://user-images.githubusercontent.com/36790120/79323933-24fcb680-7f0f-11ea-80a3-7211bcd23247.png)\r\n\r\n\r\nAny other library working great, but webpack cant compile this. any suggestion ? \r\n\r\nthanks for response!",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 122,
+  "state": "open",
+  "title": "`jsonlint --version` returns nonzero exit status, indicating failure",
+  "body": "For JSON Lint 1.6.3, running `jsonlint --version` returns exit code 1, which is commonly used to indicate failure.\r\n\r\nInstead, I'd expected `jsonlint --version` to return exit code 0, indicating success, as this seems normal usage of the utility to me. This is also recommended by the [GNU Coding Standards on `--version`](https://www.gnu.org/prep/standards/html_node/_002d_002dversion.html#g_t_002d_002dversion) in general.\r\n\r\nInstructions to reproduce this:\r\n\r\n```bash\r\ndocker run -it --rm alpine:3.10.3\r\n/ # apk add npm=10.16.3-r0\r\n/ # npm install jsonlint@1.6.3 -g\r\n/ # jsonlint --version\r\n1.6.3\r",
+  "reactions": 2,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 119,
+  "state": "open",
+  "title": "[Feature Request] More helpful error message when single quotes detected",
+  "body": "If you use single quotes, it will (confusingly) tell you \"expected STRING, got undefined\". Single quotes are in fact strings, but invalid JSON, and therefore a very common error (see #46 , and https://github.com/getinsomnia/insomnia/issues/1150), so I think a more informative error message would be much more helpful.",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 118,
+  "state": "open",
+  "title": "Dependency on JSV breaks electron-builder",
+  "body": "Running electron-builder fails in projects that have `jsonlint` dependency, because `jsonlint` depends on [JSV](https://npm.im/JSV) which has broken \"dependencies\" field causing electron-builder to freak out and crash.\r\n\r\nJSV hasn't been updated in 7 years and is seemingly abandoned (the PR fixing the dependencies field has been open since July), it's probably not a good idea to depend on it",
+  "reactions": 3,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 113,
+  "state": "open",
+  "title": "solodus is not quoted.",
+  "body": "Hi, a solidus char: '/' in JSON, as per:\r\nhttp://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf\r\nis required to be escaped too, however your validation tool let it pass unescaped.",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 110,
+  "state": "open",
+  "title": "jsonlint.parse(PATH) not working",
+  "body": "I didn't see it explicitly mentioned in the docs, but I could have swore the module interface used to take a valid file path or a json string. Perhaps not though (I would be willing to attempt a PR with the feature if interested).\r\n\r\nHere is an example\r\n\r\nex.json\r\n```\r\n{\r\n    \"hi\": 2\r\n}\r\n```\r\napp.js\r\n```js\r\nconst jsonlint = require('jsonlint');\r\njsonlint.parse('./ex.json');\r\n```\r\n\r\nAlso the README questions why one would ever use this module instead of JSON.parse? I'd say it's worthwhile because this module gives more user friendly error messages for malformed json files than JSON.parse :)",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 109,
+  "state": "open",
+  "title": "Validate against remote file",
+  "body": "Since there are websites that host schemas for all kinds of json files (`schemastore.org` ), it might be a good idea to support URL validation, e.g.: `jsonlint jsonfile.json -V  http://json.schemastore.org/babelrc`. ",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 108,
+  "state": "open",
+  "title": "Validation outcome?",
+  "body": "I am trying to validate a `json` file against a schema as follows:\r\n\r\n\r\n    jsonlint test.json --validate logstash/files/squid_schema.json\r\n\r\nHowever, I only get the file `test.json` in my stdout.\r\n\r\nHow am I informed if the validation against the schema failed or not?\r\n\r\nUsing \r\n\r\n```\r\n$ jsonlint -v\r\n1.6.3\r\n\r\n```\r\non `Ubuntu 16.04.04`",
+  "reactions": 1,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 107,
+  "state": "open",
+  "title": "Failed to Load.  System.ArgumentNullException: Argument cannot be null.",
+  "body": "Hello guys here's the full error on my logcat\r\n\r\n> Failed to Load.\r\n                                        System.ArgumentNullException: Argument cannot be null.\r\n                                        Parameter name: s\r\n                                          at System.IO.StringReader..ctor (System.String s) [0x00000] in <filename unknown>:0 \r\n                                            at (wrapper remoting-invoke-with-check) System.IO.StringReader:.ctor (string)\r\n                                          at LitJson.JsonReader..ctor (System.String json_text) [0x00000] in <filename unknown",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 103,
+  "state": "open",
+  "title": "nomnom is deprecated",
+  "body": "See https://github.com/harthur/nomnom#deprecation-notice",
+  "reactions": 17,
+  "comments": 8
+ },
+ {
+  "repo": "zaach",
+  "num": 102,
+  "state": "open",
+  "title": "unicode escaping in strings is not parsed correctly",
+  "body": "Jsonlint does not parse strings with unicode escape characters correctly. Instead of parsing the unicode `\\uXXXX` it's escaping it, so the resulting string is wrong.\r\n\r\ne.g.: parsing `'{\\n\"name\": \"\\\\u30d0\\\\u30b0\"\\n}\\n'` results in `{ name: '\\\\u30d0\\\\u30b0' }` but should be `{ name: '\\u30d0\\u30b0' }`\r\n\r\nHere is the code to reproduce the error:\r\n```js\r\nvar jsonlint = require(\"jsonlint\");\r\nvar test = '{\"name\": \"\\\\u30d0\\\\u30b0\"}';\r\nvar jsonlintRes = jsonlint.parse(test);\r\nvar jsonparseRes = JSON.parse(test);\r\nconsole.log(\"PARSE SAME?\", jsonlintRes === jsonparseRes);\r\nconsole.log(\"jsonlint result:\"",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 100,
+  "state": "open",
+  "title": "is this still maintained?",
+  "body": "@zaach ^",
+  "reactions": 14,
+  "comments": 7
+ },
+ {
+  "repo": "zaach",
+  "num": 99,
+  "state": "open",
+  "title": "--sort-keys doesn't exits with exit code 0 even if keys were not sorted before",
+  "body": "This means jsonlint can't be used to verify that object keys are sorted.",
+  "reactions": 3,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 98,
+  "state": "closed",
+  "title": "Module not found: Error: Can't resolve 'fs'",
+  "body": "I am getting the following error after I install this library:\r\n\r\n```\r\nERROR in ./node_modules/jsonlint-lines/lib/jsonlint.js\r\nModule not found: Error: Can't resolve 'fs' in '/Users/<my username>/node_modules/jsonlint-lines/lib'\r\n```",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 96,
+  "state": "open",
+  "title": "Feature request: Support line-delimited json",
+  "body": "https://en.wikipedia.org/wiki/JSON_Streaming#Line_delimited_JSON\r\n\r\n- Could be associated with certain filename extensions such as `.ndjson`, `.ldjson`. \r\n- Could be turned on/off manually.\r\n- Could be autodetected with heuristics.",
+  "reactions": 4,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 92,
+  "state": "open",
+  "title": "Tab not parseable in string.",
+  "body": "```json\r\n{\r\n    \"ABC\": \"\t\"\r\n}\r\n```\r\n\r\nJSON.parse doesn't work either.  Will use \\t",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 90,
+  "state": "open",
+  "title": "Escaped Forward Slash Becomes Escaped Backslash with Forward Slash",
+  "body": "[json.org](http://www.json.org/) explicitly defines `\\/` as a char token. However, `jsonlint <<< '{\"foo\": \"\\/\"}'` produces `{ \"foo\": \"\\\\/\" }` which is a different value for `foo`.",
+  "reactions": 1,
+  "comments": 4
+ },
+ {
+  "repo": "zaach",
+  "num": 89,
+  "state": "open",
+  "title": "Memory Limit",
+  "body": "I have some large files, ~1GB that I want to lint. Do you have a suggestion on how to bump up memory limits for the jsonlint tool? I've tried `cat myfile.json | jsonlint`.",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 87,
+  "state": "closed",
+  "title": "Consider moving the formatter to a separate package?",
+  "body": "It's very useful and I can't seem to find a good JSON formatter on `npm`, which is astounding. Moving to an independent packages means better-looking code (instead of `const formatter = require('jsonlint/lib/formatter');`), and can be tracked with a separate version number.",
+  "reactions": 3,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 86,
+  "state": "open",
+  "title": "please add a license (vaild SPDX identifier) to your package.json",
+  "body": "",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 85,
+  "state": "open",
+  "title": "Linting does not error on duplicate keys",
+  "body": "The standard javascript `JSON.parse` does not fail if the json contains duplicate keys, but rather omits all but the \"most recently\" parsed key.\nLikewise, `jsonlint.parse` does not fail on duplicate keys, omitting keys in a similar fashion. However, the README claims to be a pure javascript implementation of the service found on [jsonlint.com](http://jsonlint.com/), which does fail on duplicate keys.\n",
+  "reactions": 15,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 83,
+  "state": "open",
+  "title": "Lexing Strings",
+  "body": "But how?!?!\n\nhttps://github.com/zaach/jsonlint/blob/master/src/jsonlint.l#L9\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 82,
+  "state": "closed",
+  "title": "ReferenceError: jsonlint is not defined",
+  "body": "When using this at http://zaa.ch/jsonlint/, valid and invalid JSON yields the error `ReferenceError: jsonlint is not defined`.\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 81,
+  "state": "open",
+  "title": "Add option to add an empty line at the end of the string",
+  "body": "http://stackoverflow.com/questions/2287967/why-is-it-recommended-to-have-empty-line-in-the-end-of-file\n",
+  "reactions": 2,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 80,
+  "state": "open",
+  "title": "Property named `hasOwnProperty` breaks `jsonlint --sort-keys`",
+  "body": "Running on the shell:\n\n```\necho '{\"hasOwnProperty\":true}' | jsonlint --sort-keys\n```\n\nresults in the following error:\n\n```\n[TypeError: Property 'hasOwnProperty' of object #<Object> is not a function]\n```\n\nCould this also be happening for other `Object.prototype` properties?\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 79,
+  "state": "open",
+  "title": "Windows line endings are changed to Unix line endings",
+  "body": "`jsonlint -i` changes all Windows line endings (CRLF) to Unix line endings (LF).\n\nWould be nice if it would instead preserve the line endings.\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 78,
+  "state": "open",
+  "title": "browser version",
+  "body": "right now if you use `import jsonlint from 'jsonlint';` e.g. via browserify/babel it doesn't have an export -- there's no export statement in web/ folder\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 77,
+  "state": "open",
+  "title": "Multiple files support",
+  "body": "Hello,\nI'd like to ask you to implement (and document) support for specifying multiple input files. That would allow us to run `jsonlint` from build (e.g. npm) scripts since we would like to pass the list of the files to lint from an environment variable. There is actually a lot of linters that accept multiple files already.\n",
+  "reactions": 11,
+  "comments": 9
+ },
+ {
+  "repo": "zaach",
+  "num": 72,
+  "state": "open",
+  "title": "Parse error on   {\"city\": \"\\xDCr\\xFCmqi\"}",
+  "body": "RT\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 70,
+  "state": "closed",
+  "title": "Please add license to package.json",
+  "body": "https://docs.npmjs.com/files/package.json#license\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 66,
+  "state": "closed",
+  "title": "Please show where the error happends",
+  "body": "Please show where the error happens and what should be there instead. Because currently it says json error at this file. there is no line or what to replace instead.\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 65,
+  "state": "closed",
+  "title": "JSON-style array inside quotes parsed as arrays.",
+  "body": "Strings which look like JSON arrays are parsed as arrays (and will throw an error.)\n\nFor example:\n`\"pos\": \"[106.675,525.792,47.7364]\"` is entirely valid JSON but will error out with `Expecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '['` when linted.\n",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "zaach",
+  "num": 64,
+  "state": "open",
+  "title": "Tag the new released versions",
+  "body": "Hi, it seems that jsonlint is already v1.6.2 now.\nWould you like to add tags for the new released versions?\nThank you!\n",
+  "reactions": 6,
+  "comments": 8
+ },
+ {
+  "repo": "zaach",
+  "num": 63,
+  "state": "closed",
+  "title": "Large (long) integers incorrectly parsed",
+  "body": "Input to http://zaach.github.io/jsonlint/ : {\"fooId\":1111111111258928239}\nOutput:\n{\n  \"fooId\": 1111111111258928300\n}\n\nSomehow the 239 in the last 3 digits becomes 300. The input integer fits within 64 bits (long type in Java). The issue is reproducible with different values and it is always the last few digits which are different. This has not been an issue for small integers (2-3 digits).\n\nThanks!\n",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "zaach",
+  "num": 62,
+  "state": "open",
+  "title": "support for schema verion 04",
+  "body": "Hello,\n1) which json-schema-draft versions are supported?\n2) could you please add support for json-schema-draft-04?\n(where in the code is it configured?)\n",
+  "reactions": 4,
+  "comments": 9
+ },
+ {
+  "repo": "zaach",
+  "num": 61,
+  "state": "open",
+  "title": "Add an option for C-style braces",
+  "body": "Please add an option for C-style object and array braces.\n\nJava-style (current):\n\n``` javascript\n{\n    \"foo\" : {\n        \"bar\" : 10\n    },\n    \"lol\" : [\n        \"rofl\",\n        \"lmao\"\n    ]\n}\n```\n\nC-style:\n\n``` javascript\n{\n    \"foo\" :\n    {\n        \"bar\" : 10\n    },\n    \"lol\" :\n    [\n        \"rofl\",\n        \"lmao\"\n    ]\n}\n```\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 60,
+  "state": "closed",
+  "title": "Please add it to bower as well.",
+  "body": "",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 59,
+  "state": "open",
+  "title": "Chrome Issue",
+  "body": "![jsonlint](https://cloud.githubusercontent.com/assets/11625262/6978456/c711be94-d9f0-11e4-832b-621637702e6a.jpg)\n\n![image2](https://cloud.githubusercontent.com/assets/11625262/6978704/ac9f5b8e-d9f5-11e4-89ce-6564aa7d850d.jpg)\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 57,
+  "state": "open",
+  "title": "Cannot browserify jsonlint: module \"file\" missing",
+  "body": "Thanks for offering jsonlint via npm, works great. \n\nI stumbled upon one issue though: when I try to browserify jsonlint, an error is thrown:\n\n> Error: Cannot find module 'file' from '/home/ubuntu/workspace/node_modules/jsonlint/lib'\n\nThe module `file` is required here in the source code:\nhttps://github.com/zaach/jsonlint/blob/master/lib/jsonlint.js#L424\n\nIt looks like the \"file\" module is missing from the dependencies in package.json. But maybe this code is redundant anyway: I guess if you're not running node.js (i.e. `typeof process === 'undefined'`), the `file` module won't work either?\n",
+  "reactions": 0,
+  "comments": 6
+ },
+ {
+  "repo": "zaach",
+  "num": 56,
+  "state": "closed",
+  "title": "Accept pull requests?",
+  "body": "I was looking over the issues and was planning to send some pull requests but when i realized there were issues from 2011 I wanted to be sure they would be looked at before giving an attempt.\n",
+  "reactions": 0,
+  "comments": 10
+ },
+ {
+  "repo": "zaach",
+  "num": 55,
+  "state": "closed",
+  "title": "The `null` test doesn't test `null`",
+  "body": "The test called \"test null literal\", actually tests the number `1234`.\n\nhttps://github.com/zaach/jsonlint/blob/master/test/all-tests.js#L48\n\n``` javascript\nexports[\"test null literal\"] = function () {\n    var json = '1234';\n    assert.equal(parser.parse(json), 1234);\n};\n```\n\nLooks like a copy paste error from the previous test.\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 53,
+  "state": "open",
+  "title": "Please .npmignore anything that's not needed for production",
+  "body": "I'm pretty sure tests are not needed in production. :)\nThey just bloat project dependencies, install time, use bandwidth, etc.\n\nYou could either use the [package.json](https://www.npmjs.org/doc/files/package.json.html) `files` property to whitelist files for production or .npmignore to blacklist unneeded ones.\n\nFor more info on .npmignore and an automatic generator see https://github.com/inikulin/dmn\n",
+  "reactions": 1,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 52,
+  "state": "open",
+  "title": "Add travis integration",
+  "body": "",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 50,
+  "state": "open",
+  "title": "Ability to lint files w/ JSON comments",
+  "body": "I'm trying to lint some JSON files that happen to have some comments in JSON like this:\n\n``` json\n// this is configuration specific to aws deployments\n{\n  // disable statsd for aws\n  \"statsd\": {\n    \"enabled\": false\n  }\n}\n```\n\nBut the `$ jsonlint config/aws.json` command gives me the following:\n\n``` sh\n$ jsonlint config/aws.json\n[Error: Parse error on line 1:\n// this is configura\n^\nExpecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[', got 'undefined']\n```\n\nI'm not sure what libs **mozilla/persona** is using to load the commented JSON, but a bunch of the files are failing jsonlint du",
+  "reactions": 14,
+  "comments": 14
+ },
+ {
+  "repo": "zaach",
+  "num": 48,
+  "state": "open",
+  "title": "Piping to head causes error",
+  "body": "The following console interaction should explain the issue.\n\n```\n$ curl http://host/file.json | jsonlint | head -4\n{\n  \"some-key\": \"some-value\",\n  \"array\": [\n    {\n\nevents.js:72\n        throw er; // Unhandled 'error' event\n              ^\nError: write EPIPE\n    at errnoException (net.js:904:11)\n    at Object.afterWrite (net.js:720:19)\n```\n\nIs there a way to know that the closed output pipe is not an error?\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 47,
+  "state": "open",
+  "title": "Unescaped Unicode Characters Not Detected",
+  "body": "I had an app that was giving unterminated string constant exceptions in jQuery/Firefox and Illegal Character exceptions in jQuery/Chrome. I ran my JSON content through JSONLint and it reported the content as valid.\n\nAfter looking into it, I found that my JSON had unescaped unicode characters (smart quotes).\n\nI modified my code to escape unicode chars in the format \\uxxxx and my app is now working. \n\nSo, it looks like jsonlint is passing as correct JSON content that has unicode and that's not correct.\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 46,
+  "state": "closed",
+  "title": "single quote string shows as invalid",
+  "body": "this is not valid\n{\n    'a': 'b'\n}\n\nbut this is valid\n{\n\"a\" : \"b\"\n}\ni think single quote strings are valid in javascript\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 45,
+  "state": "closed",
+  "title": "-s option doesn't sort object keys",
+  "body": "-s option doesn't sort keys in the below example. 'jsonlint -s testcase.json' returns the same json as input. Obviously, \"w\" should follow \"a\".\n\n--- testcase.json ---\n[[{\n \"w\": \"\",\n \"a\": 4\n}]]\n\nversion 1.6.0\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 42,
+  "state": "open",
+  "title": "why don't you allow \"values\"?",
+  "body": "The website http://jsonlint.com/ says it is based on this library.   However, that site has the following bug: it rejects valid JSON that is NOT an object or an array.  These strings are all valid JSON:\n\n1\n12\n12.34\n\"string\"\ntrue\nfalse\nnull\n\nShould this be corrected in this library?\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 41,
+  "state": "open",
+  "title": "--quiet + STDIN never gives errors and exits with exitcode 0",
+  "body": "Quiet + file:\n\n```\n$ echo \"{ 'single-quoted': 'thus-bad-json' }\" > /tmp/bad.json\n$ jsonlint -c -q /tmp/bad.json ; echo $?\n/tmp/bad.json: line 1, col 1, found: 'INVALID' - expected: 'STRING', '}'.\n1\n```\n\nQuiet + STDIN:\n\n```\n$ echo \"{ 'single-quoted': 'thus-bad-json' }\" | jsonlint -c -q -; echo $?\n0\n```\n\nResolved with following patch:\n\n```\n--- /usr/local/bin/jsonlint.orig        2013-11-28 11:43:41.000000000 +0100\n+++ /usr/local/bin/jsonlint     2013-11-28 11:44:48.000000000 +0100\n@@ -147,7 +147,8 @@ function main (args) {\n       source += chunk.toString('utf8');\n     });\n     stdin.on('end', fu",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 40,
+  "state": "open",
+  "title": "Prettier error messages",
+  "body": "Right now the default error messages are pretty hard to parse by humans. It would be great if the error messages could be a bit friendlier, such as:\n\nThe 'foo' property is missing and is required.\n\nOr\n\nThe 'foo' property should be a string but is a number.\n",
+  "reactions": 1,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 39,
+  "state": "open",
+  "title": "Object error in IE 11",
+  "body": "I'm using the checker under web/\nIn Internet Explorer 11, if you paste this text\n::\n {\n\n  \"Accept-Language\": \"en-US,en;q=0.8\"\n\n  \"Host\": \"headers.jsontest.com\",\n\n  \"Accept-Charset\": \"ISO-8859-1,utf-8;q=0.7,_;q=0.3\",\n  \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,_/*;q=0.8\"\n }\n\nyou get an [Object error], instead of a parse fail.\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 38,
+  "state": "closed",
+  "title": "--pretty-print option always exits with status 0, even if input is invalid json",
+  "body": "If you give jsonlint the --pretty-print option with invalid json, then jsonlint prints an error message (good), outputs its best guess at formatted json (good), but exits with status 0 (bad). Perhaps this means that the parsing succeeded, but this makes it difficult to detect whether the input is valid json.\n\nExpected behavior: exit status is 0 if input valid json, 1 otherwise.\n\n(jsonlint 1.6.0, node v 0.10.0 on OS X 10.6.8)\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 37,
+  "state": "open",
+  "title": "Problems recognizing and/or reformatting escapes",
+  "body": "I've noticed a couple of issues in the reformatted output when there's escapes in the input:\n1. disappearing slashes.  This represents a two-character string, not a newline escape:\n   - in: `\"\\\\n\"`  \n   - expected out: `\"\\\\n\"`\n   - actual out: `\"\\n\"`\n   \n   This also happens for b, r, f, and t.\n2. unexpected slashes.  \n   - in: `\"\\u0066\"`\n   - expected out: `\"f\"` (or `\"\\u0066\"`)\n   - actual out: `\"\\\\u0066\"`\n",
+  "reactions": 2,
+  "comments": 4
+ },
+ {
+  "repo": "zaach",
+  "num": 36,
+  "state": "open",
+  "title": "Printing Location of Schema error possible?",
+  "body": "Is it possible to output the line number of line of a place where the schema error occured?\nIf that is possible, then it can be parsed by the text editors to show where\nuser mistakingly typed an error, resulting more ease on editing the text...\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 34,
+  "state": "closed",
+  "title": "JSON Output",
+  "body": "Hi,\n\nReally dig your module, however when I tried to use in my module and output the json via console.log I got the following outputs:\n\nWebserverCPUAlarmHigh: { Type: 'AWS::CloudWatch::Alarm', Properties: [Object] },\nWebserverCPUAlarmLow: { Type: 'AWS::CloudWatch::Alarm', Properties: [Object] } },\n\nNotice the [Object] portion... Not sure why its not outputting straight json?\n\nHere's my code: https://gist.github.com/Hesse/6513835\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 29,
+  "state": "closed",
+  "title": "[Solved] Global install with npm doesn't work.",
+  "body": "When I try to use jsonlint after a global install i get:\n\nmodule.js:340\n    throw err;\n          ^\nError: Cannot find module 'jsonlint'\n\nWhen using the project/local install (without -g) everything works as it should.\n\nAm I doing something wrong?\n\nWhen doing a global install i get this:\n$ sudo npm install jsonlint -g\nnpm http GET https://registry.npmjs.org/jsonlint\nnpm http 304 https://registry.npmjs.org/jsonlint\nnpm http GET https://registry.npmjs.org/nomnom\nnpm http GET https://registry.npmjs.org/JSV\nnpm http 304 https://registry.npmjs.org/nomnom\nnpm http 304 https://registry.npmjs.org/JSV\nn",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 28,
+  "state": "closed",
+  "title": "Accept input from stdin",
+  "body": "I want to be able to pipe a curl request into this awesome package\n\nlike \n\n```\n$curl http://API/ping.js |jsonlint\n```\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 25,
+  "state": "closed",
+  "title": "enh:  quiet mode",
+  "body": "I am using this as my builder / linter in Sublime Text 2.  It would be helpful to have a '-q' option, so I can just see the errors.  (In my case, just redirecting to '/dev/null' isn't an option.  \n\nRecipe for the curious:\n\n```\n{\n    \"cmd\": [\"jsonlint\", \"$file\"],\n    \"selector\": \"source.json\",\n    \"path\": \"/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin\"\n}\n```\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 24,
+  "state": "closed",
+  "title": "tab inside string value is not handled correctly",
+  "body": "example:\n\n{\n    \"action\": \"log  in\"\n}\n\noutput:\n\nError: Parse error on line 2:\n{    \"action\": \"log in\"}\n---------------^\nExpecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[', got 'undefined'\n\nexpected output:\n\nJSON is valid!\n",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 23,
+  "state": "closed",
+  "title": "Should accept a folder/glob as an argument",
+  "body": "I'd love to lint multiple json files in a single go, and get a report of each failure, but: `jsontlint project/**/*.json` doesn't seem to do the job. When linting multiple files it'd probably make sense to not output pretty-printed json when a file passes - simply return the errors.\n\nWhat do you think?\n",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "zaach",
+  "num": 22,
+  "state": "closed",
+  "title": "reformat JSON error",
+  "body": "1. paste the following code to [jsonlint](http://zaach.github.com/jsonlint/)\n   \n   ``` javascript\n   {\n     \"s\": \"\\\\\"\n   }\n   ```\n2. make sure the checkbox `reformat JSON` is checked, then click `validate` button many times\n\nThe backslash will continue to repeat itself\n",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 21,
+  "state": "closed",
+  "title": "A vim plugin using jsonlint.js",
+  "body": "I developed a vim plugin called  [sourcebeautify](https://github.com/michalliu/sourcebeautify.vim) using `jsonlint.js` as it's error checker and beautifier. \n\nThe script hosted on vim.org aslo, [link](http://www.vim.org/scripts/script.php?script_id=4079)\n\nThanks for this cool project!\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 20,
+  "state": "closed",
+  "title": "Support schemas",
+  "body": "Hi. Do you intend to add a feature to validate json against [schemas](http://tools.ietf.org/id/draft-zyp-json-schema-03.html)?\n\nOtherwise, I'll use [JSV library](https://github.com/garycourt/JSV/) although it has no CLI\n",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "zaach",
+  "num": 19,
+  "state": "closed",
+  "title": "No licensing/copyright information",
+  "body": "I can't seem to find licensing information for this package anywhere. Something like BSD would be great, but of course that's up to you, as long as the terms are clear.\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 17,
+  "state": "closed",
+  "title": "npm WARN underscore@1.1.7",
+  "body": "npm WARN underscore@1.1.7 dependencies field should be hash of <name>:<version-range> pairs\n/usr/local/bin/jsonlint -> /usr/local/lib/node_modules/jsonlint/lib/cli.js\njsonlint@1.3.0 /usr/local/lib/node_modules/jsonlint \n\u2514\u2500\u2500 nomnom@1.5.1\n\nI am having this warning message at the end of jsonlint installation. Although that message jsonlint seems to be working fine. But again I would like to learn what it is.\n\nThanks.\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 16,
+  "state": "closed",
+  "title": "Don't join with CWD",
+  "body": "```\n[jga] ~: jsonlint /tmp/test.json \n\nnode.js:134\n        throw e; // process.nextTick error, or 'error' event on first tick\n        ^\nError: EBADF, Bad file descriptor '/home/jga/tmp/test.json'\n    at Object.openSync (fs.js:221:18)\n    at Object.readFileSync (fs.js:112:15)\n    at main (/usr/lib/node_modules/jsonlint/lib/cli.js:53:23)\n    at Object.<anonymous> (/usr/lib/node_modules/jsonlint/lib/cli.js:93:1)\n    at Module._compile (module.js:411:26)\n    at Object..js (module.js:417:10)\n    at Module.load (module.js:343:31)\n    at Function._load (module.js:302:12)\n    at Array.<anonymous> (mod",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 14,
+  "state": "closed",
+  "title": "node version in npm registry",
+  "body": "The package in the npm registry (http://search.npmjs.org/#/jsonlint) has not been updated for node 0.6+.\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 13,
+  "state": "open",
+  "title": "Duplicate keys aren't cool!",
+  "body": "```\n$ echo '{\"a\":1,\"a\":2}' | jsonlint\nThe \"sys\" module is now called \"util\". It should have a similar interface.\n{\n  \"a\": 2\n}\n$ \n```\n",
+  "reactions": 24,
+  "comments": 27
+ },
+ {
+  "repo": "zaach",
+  "num": 12,
+  "state": "closed",
+  "title": "Not compatible with node 0.6.0",
+  "body": "npm ERR! Unsupported\nnpm ERR! Not compatible with your version of node/npm: jsonlint@1.2.0\nnpm ERR! Required: {\"node\":\"0.4 || 0.5\"}\nnpm ERR! Actual:   {\"npm\":\"1.0.104\",\"node\":\"0.6.0\"}\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 10,
+  "state": "closed",
+  "title": "create a compact output format consistent with node-jshint and csslint",
+  "body": "add a new option to allow a compact error report for easy parsing, like:\n\n```\nfoo.json: line 3, col 6, Expecting 'STRING', '}'.\n```\n\nsee [CSSLint discussion](https://github.com/stubbornella/csslint/issues/88) about this subject.\n\nthat way it can be easily integrated into other tools like [Vim](https://github.com/scrooloose/syntastic) or any other IDE.\n",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "zaach",
+  "num": 7,
+  "state": "closed",
+  "title": "Don't write back empty JSON files with --in-place",
+  "body": "```\ndiff --git a/lib/cli.js b/lib/cli.js\nindex 068fcf1..dce6845 100755\n--- a/lib/cli.js\n+++ b/lib/cli.js\n@@ -47,14 +47,20 @@ function parse (source) {\n }\n\n function main (args) {\n-  var source = '';\n+  var source = '',\n+      parsedSource = '';\n    if (options.file) {\n     var path = require('path').join(process.cwd(), options.file); \n     source = fs.readFileSync(path, \"utf8\");\n+    parsedSource = parse(source);\n     if (options.inplace) {\n-      fs.writeSync(fs.openSync(path,'w+'), parse(source), 0, \"utf8\");\n+      if (parsedSource) {\n+        fs.writeSync(fs.openSync(path,'w+'), parsedSourc",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 6,
+  "state": "closed",
+  "title": "In-place overwrite with pretty-printed JSON",
+  "body": "Instead of outputting the pretty-printed JSON on `stdout`, have an option to simply re-write the file in question with the pretty-printed JSON data. (Mainly useful in precommit-hooks and other automation tools.)\n\nPerhaps via an `-i` / `--in-place` option, per `sed`.\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 5,
+  "state": "closed",
+  "title": "Normalize pretty-printed JSON",
+  "body": "For various reasons, I'd quite like the pretty-printed JSON to have it's object-keys sorted on output (mainly sane diff'ing). Either optionally or forced (like Python's `json`-module).\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "zaach",
+  "num": 4,
+  "state": "closed",
+  "title": "Make indent for pretty-printing configurable",
+  "body": "I personally prefer four spaces, and I know quite a few who prefer tabs (&c). Perhaps an `--indent <whatever>` option?\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "zaach",
+  "num": 1,
+  "state": "closed",
+  "title": "NPM install file is out of date",
+  "body": "I can't currently install your package.json file with NPM. Please update to fix it, thanks!\n",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 43,
+  "state": "open",
+  "title": "[Dependencies] Update ajv package version to address CVE vulnerabilities",
+  "body": "## Issue\n- https://github.com/advisories/GHSA-2g4f-4pwh-qvx6\n- ajv 8.17.1 is vulnerable to ReDoS. Request is to update to at least 8.18.0. Also it would be better to use carets (^) to support floating dependencies.\n- https://github.com/prantlf/jsonlint/blob/master/package.json#L59\n- Tried fixing using `npm audit fix` but since it is pin pointed to a specific version it wouldn't fix the issue.\n- `@prantlf/jsonlint@17.0.1`\n\nThanks for your help! @prantlf ",
+  "reactions": 7,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 42,
+  "state": "open",
+  "title": "Generate github annotations",
+  "body": "It would be helpful if there was a cli argument which allows us to specify the format used when logging errors/warnings. One such format would be github as described in https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands",
+  "reactions": 0,
+  "comments": 0
+ },
+ {
+  "repo": "prantlf",
+  "num": 41,
+  "state": "closed",
+  "title": "Vulnerability in diff@8.0.2",
+  "body": "GitHub just published a vulnerability advisory for `diff@8.0.2`: https://github.com/advisories/GHSA-73rr-hh4g-fpgx\n\nWould you be able to update to `diff@8.0.3`?\n\nThanks!",
+  "reactions": 1,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 40,
+  "state": "open",
+  "title": "Support for ajv-format2019 iri and iri-reference",
+  "body": "For example:\n\nimport addFormats from \"ajv-formats-draft2019\":\nvar ajv = new Ajv2020({ strict: false });\naddFormats(ajv, {mode: \"full\", formats: [\"uri-reference\", \"uri\", \"iri-reference\", \"iri\"], keywords: true});\n\nThanks!\n\nJohn",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 39,
+  "state": "open",
+  "title": "Does Draft 2020-12 JSON schema validation work",
+  "body": "Pardon, this is the first time I've tried schema validation with any JSON linter\n\n$ jsonlint examples/abox.json --validate schemas/2020-12-JSONSchema.json schemas/x3d-4.0-JSONSchema.json\nFile: examples/abox.json\nLoading the JSON Schema failed:\nCompiling the JSON Schema failed.\nstrict mode: unknown keyword: \"$dynamicAnchor\"\n\nThis appears to be relevant:\n\n$ grep dynamicAnchor schemas/*\nschemas/2020-12-JSONSchema.json:    \"$dynamicAnchor\": \"meta\",\nschemas/2020-12-JSONSchema.json:            \"$comment\": \"\\\"$recursiveAnchor\\\" has been replaced by \\\"$dynamicAnchor\\\".\",\n\nOther incantations I've tried",
+  "reactions": 0,
+  "comments": 9
+ },
+ {
+  "repo": "prantlf",
+  "num": 38,
+  "state": "open",
+  "title": "glob/globSync from node:fs\u2026",
+  "body": "Can this package use glob and globSync from node:fs instead of fast-glob? I\u2019m not entirely sure it does, but I\u2019m working on reducing dependencies\u2026\n\nE.g.:\n\nimport { globSync } from 'node:fs';\nimport { glob } from 'node:fs/promises';\n\nI am using the latest node.js, or a recent version.\n\nThanks!\n\nJohn",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "prantlf",
+  "num": 37,
+  "state": "closed",
+  "title": "Color diff option",
+  "body": "Would it be possible to implement a colorized diff format?",
+  "reactions": 1,
+  "comments": 3
+ },
+ {
+  "repo": "prantlf",
+  "num": 36,
+  "state": "open",
+  "title": "Allow compact arrays",
+  "body": "Is there a flag to be less strict about compact arrays?\n\nI'd like to have a diff for things like fixes for incorrect trailing commas, etc, but not for these other sorts of concerns.\n\nI'm not sure if `--no-pretty-print` or `--no-sort-keys` are valid (the program doesn't error, but doesn't seem to behave differently\n\n```diff\n-      \"matchDepTypes\": [\"dev\", \"devDependencies\"],\n-      \"addLabels\": [\"dev-dependencies\"]\n+      \"matchDepTypes\": [\n+        \"dev\",\n+        \"devDependencies\"\n+      ],\n+      \"addLabels\": [\n+        \"dev-dependencies\"\n+      ]\n```",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 32,
+  "state": "open",
+  "title": "Immutable String Representation (Feature)",
+  "body": "I have some strings that I have carefully constructed and do not want modifications made to them when linted.\n\nCould an option be added to specify that string content representation should not be changed?\n\nExample of the string representation change that I would like to avoid. The Unicode escapes are translated to their corresponding characters.   \n\n```diff\n-          \"pattern\": \"^(?:\\\\\\\\x[0-9A-F]{2}|[\\u0020-\\u007E])+$\",               \n+          \"pattern\": \"^(?:\\\\\\\\x[0-9A-F]{2}|[ -~])+$\", \n```",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "prantlf",
+  "num": 31,
+  "state": "closed",
+  "title": "Can't install jsonlint using npm",
+  "body": "`npm install --global @prantlf/jsonlint@13.1.0` fails with 404.\r\nWhen I search jsonlint in https://www.npmjs.com it returns 404 too.\r\nSee it here - https://www.npmjs.com/package/jsonlint.\r\n<img width=\"968\" alt=\"image\" src=\"https://github.com/user-attachments/assets/11d1d132-0040-4d19-a4b8-c58a06f0d906\">\r\n",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 27,
+  "state": "closed",
+  "title": "Option to ignore case when sorting keys",
+  "body": "please add setting/option to ignore case when sorting keys.\r\n\r\nI.e:\r\n\r\n```\r\na\r\nAA\r\nb\r\nBB\r\nc\r\n```\r\n\r\nand not:\r\n```\r\nAA\r\nBB\r\na\r\nb\r\nc\r\n```",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 26,
+  "state": "closed",
+  "title": "False difference detection when using \"comments\"?",
+  "body": "Test case:\r\n\r\n`jsonlint.json`:\r\n```json\r\n{\r\n  \"check\": true,\r\n  \"comments\": true,\r\n  \"continue\": true,\r\n  \"enforce-double-quotes\": true,\r\n  \"no-duplicate-keys\": true,\r\n  \"sort-keys\": true,\r\n  \"trailing-newline\": true,\r\n  \"trim-trailing-commas\": true\r\n}\r\n```\r\n\r\n`test.json`\r\n```jsonc\r\n{\r\n  \"a\": \"b\" //aaaa\r\n}\r\n```\r\n\r\ntest run:\r\n```sh\r\njsonlint -f jsonlint.json test.json\r\n```\r\n\r\n```sh\r\nFile: test.json\r\n1 hunk differs\r\n===================================================================\r\n--- test.json.orig\r\n+++ test.json\r\n@@ -1,3 +1,3 @@\r\n {\r\n-  \"a\": \"b\" //aaaa\r\n+  \"a\": \"b\"\r\n }\r\n```\r\n\r\nI'm a missing",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 25,
+  "state": "closed",
+  "title": "Broken link to description of configuration files in  README",
+  "body": "In the README file, in the bulleted list near the top, the link to \"configuration files\" in the item\r\n\r\n```\r\nConsumes configuration from both command line and \r\n[configuration files](https://github.com/prantlf/jsonlint/blob/master/configuration).\r\n```\r\n\r\npoints to a nonexistent location.",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 23,
+  "state": "closed",
+  "title": "`--no-duplicate-keys` false positive when key is `constructor`",
+  "body": "**Reproduction**\r\n\r\n```sh\r\n#!/usr/bin/env sh\r\ncat <<\"EOF\"\r\n{\r\n  \"constructor\": \"value\"\r\n}\r\nEOF\r\nnpx  @prantlf/jsonlint --quiet --no-duplicate-keys file.json\r\n```\r\n\r\nOutput:\r\n\r\n```text\r\nFile: file.json\r\nParse error on line 2, column 18:\r\n{    \"constructor\": \"value\"}\r\n------------------^\r\nDuplicate key: \"constructor\"\r\n```\r\n\r\nThis may potentially be a prototype pollution vulnerability for [constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)? Anyways, thank you for the work you have done on this package.",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "prantlf",
+  "num": 22,
+  "state": "closed",
+  "title": "Trim trailing commas doesn't work",
+  "body": "Example json:\r\n```\r\n{\r\n     \"ErrorInstance\": {\r\n        \"type\": \"string\",\r\n        \"description\": \"Description\",\r\n        \"example\": \"/path/12345/msgs/abc\"\r\n      },\r\n      \"ErrorTitle\": {\r\n        \"type\": \"string\",\r\n        \"description\": \"Description\",\r\n        \"example\": \"You do not have enough credit.\"\r\n      },\r\n      \"ErrorDetail\": {\r\n        \"type\": \"string\",\r\n        \"description\": \"Description\",\r\n        \"example\": \"Your current balance is 30, but that costs 50.\"\r\n      },\r\n}\r\n```\r\n\r\nCommand:\r\n`jsonlint --trim-trailing-commas test.json`\r\n\r\nOutput:\r\n```\r\nFile: test.json\r\nParse error on",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "prantlf",
+  "num": 21,
+  "state": "closed",
+  "title": "No `location` on Node 19",
+  "body": "In Node 19, the throwed error no longer contains the `location` (and the `pointer`) property.\r\n\r\n## To reproduce\r\n\r\n```JavaScript\r\nimport { parse } from \"@prantlf/jsonlint\";\r\n\r\nconsole.log(\"Node \" + process.version);\r\ntry {\r\n    parse('{ \"foo\": baz }');\r\n} catch (err) {\r\n    console.log(err);\r\n}\r\n```\r\n\r\n### In Node 18\r\n\r\n```\r\nNode v18.16.0\r\nSyntaxError: Parse error on line 1, column 10:\r\n{ \"foo\": baz }\r\n---------^\r\nUnexpected token b\r\n    at JSON.parse (<anonymous>)\r\n    at parseNative (/home/regseb/testcase/node_modules/@prantlf/jsonlint/lib/jsonlint.js:941:17)\r\n    at parse (/home/regseb/tes",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "prantlf",
+  "num": 20,
+  "state": "closed",
+  "title": "Running jsonlint against '**/*.json' returns an error if no files found",
+  "body": "```sh\r\n\u276f jsonlint --quiet --compact --continue --no-duplicate-keys '**/*.json'\r\nno files found\r\n\u276f echo $?\r\n1\r\n```\r\n\r\nIt would be amazing if there were an option to not have this return an error and instead to just continue on its merry way. We are using this utility as part of a general linting workflow in GitLab and sometimes we may run the utility without any json files to lint. We'd like to have it return the \"no files found\" message but instead return a 0 exit code.",
+  "reactions": 1,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 19,
+  "state": "open",
+  "title": "Empty objects get split by newline with `--pretty-print`, then fails without",
+  "body": "Reproduction: https://github.com/swantzter/jsonlint-repro\r\n\r\nHi, we're having an issue where there's inconsistent behaviours between `--pretty-print` and \"just\" linting when it comes to empty objects.\r\n\r\nWhen pretty-print serialises an object it outputs `{\\n}` whereas the lint want it to become just `{}`\r\n\r\nGiven the above reproduction and test.json:\r\n\r\n```json\r\n{\r\n  \"obj1\": {},\r\n  \"obj2\": {\r\n  }\r\n}\r\n```\r\n\r\nrunning `npm run lint:fix` (`jsonlint --in-place --pretty-print`) changes the file and outputs the following\r\n\r\n```json\r\n{\r\n  \"obj1\": {\r\n  },\r\n  \"obj2\": {\r\n  }\r\n}\r\n```\r\n\r\nRunning `npm run l",
+  "reactions": 2,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 18,
+  "state": "closed",
+  "title": "Running jsonlint with patterns in configfile blocks on stdin since v14.0.1",
+  "body": "I'm working with only configuationfiles in my projects instead of cmdline parameters. But since version 14.0.1 it don't work anymore because he now always waits for stdin input.\r\n\r\nExample of a config file: `.jsonlintrc.yaml`:\r\n```\r\n---\r\npatterns:\r\n  - \"**/*.json\"\r\n  - \"!resources/**\"\r\n  - \"!themes/**\"\r\ncontinue: true\r\nlog-files: true\r\n```\r\nIt worked before <V14 with only `jsonlint -ln`. Now I must always give arguments like the name, the directory or a pattern. But in that case he is ignoring the patterns values in the config file.\r\n\r\nThis looks caused by the fix in #17. ",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "prantlf",
+  "num": 17,
+  "state": "closed",
+  "title": "Error running the new version",
+  "body": "When running as I did in the past I get the following error\r\n\r\n```bash\r\n$ jsonlint --diff --check\r\nPATH/.nvm/versions/node/v19.6.0/lib/node_modules/@prantlf/jsonlint/lib/cli.js:503\r\n    args = params.patterns || []\r\n         ^\r\n\r\nTypeError: Assignment to constant variable.\r\n    at main (PATH/.nvm/versions/node/v19.6.0/lib/node_modules/@prantlf/jsonlint/lib/cli.js:503:10)\r\n    at Object.<anonymous> (PATH/.nvm/versions/node/v19.6.0/lib/node_modules/@prantlf/jsonlint/lib/cli.js:543:1)\r\n    at Module._compile (node:internal/modules/cjs/loader:1246:14)\r\n    at Module._extensions..js (node:internal/",
+  "reactions": 1,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 16,
+  "state": "open",
+  "title": "Schema validation with remote specs",
+  "body": "Hi Ferdinand, thanks for maintaining this fork! Looks p awesome :) \r\n\r\nCan you clarify how do I actually run the schema validation for me, please?\r\n\r\nWhat I've got:\r\n\r\ndata JSON (example):\r\n```\r\n{\r\n    \"$schema\": \"./../json.schema/form.schema.json\",\r\n    \"form\": [\r\n        {\r\n            \"type\": \"string\"\r\n        }\r\n    ]\r\n}\r\n```\r\n\r\n../json.schema/form.schema.json JSON:\r\n```\r\n{\r\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\r\n  \"$id\": \"form.schema.json\",\r\n  \"title\": \"Form\",\r\n  \"description\": \"A form description\",\r\n  \"type\": \"array\",\r\n  \"minItems\": 1,\r\n  \"properties\": {\r\n    \"form",
+  "reactions": 0,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 15,
+  "state": "closed",
+  "title": "Unexpected token for valid JSON",
+  "body": "Given the following JSON ([launchSettings.json.zip](https://github.com/prantlf/jsonlint/files/9548330/launchSettings.json.zip)):\r\n\r\n```json\r\n{\r\n  \"profiles\": {\r\n    \"app.service.backbone\": {\r\n      \"commandName\": \"Project\",\r\n      \"environmentVariables\": {\r\n        \"DOTNET_ENVIRONMENT\": \"Development\"\r\n      }\r\n    }\r\n  }\r\n}\r\n```\r\n\r\nWhich outputs the following error:\r\n\r\n```sh\r\n# jsonlint launchSettings.json \r\nFile: launchSettings.json\r\nParse error on line 1, column 1:\r\n{  \"profiles\": { ...\r\n```\r\n\r\nNot sure why the same JSON is considered **valid** on the [demo website](https://prantlf.github.io",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "prantlf",
+  "num": 14,
+  "state": "closed",
+  "title": "CI params",
+  "body": "Hi,\r\n\r\nFirstly, thank you for this project!\r\n\r\nHow would you suggest to use jsonlint as part of CI?\r\nI'm not managing to get nice output for github actions\r\n\r\nThe best I got to is \r\n```\r\njsonlint --diff --check --continue\r\n```\r\n\r\nBut the output is not pretty and a bit hard to work with...\r\n\r\nThanks,\r\nSimon",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 10,
+  "state": "closed",
+  "title": "Firefox ReferenceError: getOffset is not defined",
+  "body": "Go to https://prantlf.github.io/jsonlint/ leave default options, click Validate button and got:\r\n```\r\nReferenceError: getOffset is not defined\r\n```",
+  "reactions": 1,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 9,
+  "state": "closed",
+  "title": "Support config file",
+  "body": "Thanks for forking and continuing to maintain/enhance [zaach/jsonlint](https://github.com/zaach/jsonlint), I really hope this becomes the official fork.\r\n\r\nI would like to request for this to support config files (eg. `.jsonlintrc.yml`). That would then allow this to be used by tools such as [github/super-linter](https://github.com/github/super-linter), which currently uses [zaach/jsonlint](https://github.com/zaach/jsonlint), which is not configurable (see https://github.com/github/super-linter#user-content-template-rules-files).",
+  "reactions": 0,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 7,
+  "state": "closed",
+  "title": "TypeScript errors",
+  "body": "I discovered how old the JSONLint module I was using, so thought I'd try your fork out\r\nMy project is TypeScript based and I'm seeing these weird errors\r\n\r\n```\r\nnode_modules/@prantlf/jsonlint/lib/jsonlint.d.ts:57:16 - error TS2665: Invalid module name in augmentation. Module '@prantlf/jsonlint/lib/validator' resolves to an untyped module at '/home/ben/dev/armview-vscode/node_modules/@prantlf/jsonlint/lib/validator.js', which cannot be augmented.\r\n\r\n57 declare module '@prantlf/jsonlint/lib/validator' {\r\n                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n\r\nnode_modules/@prantlf/jsonlint/lib/js",
+  "reactions": 0,
+  "comments": 3
+ },
+ {
+  "repo": "prantlf",
+  "num": 6,
+  "state": "closed",
+  "title": "How can I lint all json files in my project ignoring node_modules directory?",
+  "body": "How can I lint all json files in my project? When I run it like `jsonlint --sort-keys --in-place .`, it tries to run against the json files in `node_modules` directory. How can I ignore the `node_modules` directory?",
+  "reactions": 1,
+  "comments": 2
+ },
+ {
+  "repo": "prantlf",
+  "num": 5,
+  "state": "closed",
+  "title": "Support a proper dry run",
+  "body": "Jsonlint will exit 0 even when there are still things that `--in-place` would fix, which means to do a full lint that will fail a CI pipeline, you have to run `--in-place` and assess whether there were any resulting changes e.g. something like:\r\n\r\n```bash\r\njsonlint resources/lang --quiet --in-place --indent=\"  \" --no-duplicate-keys --sort-keys \\\r\n && git --no-pager diff resources/lang \\ # to show the diff\r\n && git diff --quiet --stat resources/lang  # to exit 1\r\n```\r\n\r\nWould be great if there was a way to make key sorting and incorrect indentation error out.",
+  "reactions": 0,
+  "comments": 4
+ },
+ {
+  "repo": "prantlf",
+  "num": 3,
+  "state": "closed",
+  "title": "Enforce newline at end of file",
+  "body": "I don't know whether this should be configurable, or how it plays with the JSON specifications you're adhering to, but I would expect a newline to be enforced at the end of the file, or at least an option to enable that via (though I'd say it's a sensible default).\r\n\r\nThanks for maintaining this fork! There are so many jsonlint's that can't glob/walk directories \ud83d\ude3f",
+  "reactions": 1,
+  "comments": 1
+ },
+ {
+  "repo": "prantlf",
+  "num": 1,
+  "state": "closed",
+  "title": "Error output display incorrect for files with windows-style line breaks",
+  "body": "The error location output is incorrect for files with windows-style line breaks. (\\r\\n)\r\n\r\nExample file: [test.zip](https://github.com/prantlf/jsonlint/files/3356865/test.zip)\r\n\r\nThis file produces error output of:\r\n```\r\nParse error on line 4, column 3:\r\n} } \"bar\":\r\n---------------------^\r\nUnexpected token }\r\n```\r\n\r\nExpected output: The output should include the referenced bracket (\"}\") and the arrow should point to it like this:\r\n```\r\nParse error on line 4, column 3:\r\n...\": {    \"bar\":  }}\r\n-------------------^\r\nUnexpected token }\r\n```\r\n",
+  "reactions": 0,
+  "comments": 2
+ }
+]

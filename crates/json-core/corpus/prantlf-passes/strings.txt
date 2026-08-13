@@ -1,0 +1,4 @@
+{
+  "property1": "v'a\"lue",
+  'property2': 'v\'a"lue'
+}

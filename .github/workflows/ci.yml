@@ -1,0 +1,32 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request:
+
+jobs:
+  js:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { node: [20, 22] }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ matrix.node }}" }
+      - name: Fetch conformance corpora
+        run: CORPORA_DIR=/tmp bash scripts/fetch-corpora.sh
+      - name: Unit + conformance + issue regressions
+        run: CORPORA_DIR=/tmp node packages/core/test/run.js
+      - name: Hardening gauntlet (fuzz, pathological, differential)
+        run: CORPORA_DIR=/tmp node packages/core/test/harden.js
+
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Fetch conformance corpora
+        run: CORPORA_DIR=/tmp bash scripts/fetch-corpora.sh
+      - run: cargo test --release --manifest-path crates/json-core/Cargo.toml
+      - run: cargo run --release --manifest-path crates/json-core/Cargo.toml --example conformance -- /tmp/JSONTestSuite-master/test_parsing
+      - run: cargo run --release --manifest-path crates/json-core/Cargo.toml --example legacy
+      - run: CORPORA_DIR=/tmp cargo run --release --manifest-path crates/json-core/Cargo.toml --example harden

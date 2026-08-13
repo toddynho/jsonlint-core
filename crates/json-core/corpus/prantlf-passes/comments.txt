@@ -1,0 +1,8 @@
+{
+  // Sets a value to a property.
+  "property": "va/*lu*/e",
+  /* An object property:
+  */ "object": {} /*
+     works too.
+  */
+}
